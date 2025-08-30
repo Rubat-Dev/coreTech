@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+/* sab dots white */
+.swiper-pagination-bullet {
+    background: white !important;
+    opacity: 0.6; /* halka fade inactive dots ke liye */
+  }
+  
+  /* active dot bright white */
+  .swiper-pagination-bullet-active {
+    background: white !important;
+    opacity: 1;
+  }
+  
