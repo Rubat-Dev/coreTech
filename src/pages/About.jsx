@@ -1,6 +1,6 @@
 import React from "react";
 import { Award, Users, Globe2, Workflow } from "lucide-react";
-
+import team from "../assets/team.png"
 const About = () => {
   const values = [
     {
@@ -92,11 +92,11 @@ const About = () => {
           {/* Right Image */}
           <div className="relative">
             <img
-              src="https://www.coretechio.com/images/team.png"
+              src={team}
               alt="About Us"
-              className="rounded-3xl shadow-2xl h-[650px]"
+              className="rounded-3xl shadow-2xl "
             />
-            <div className="absolute -bottom-5 -left-16 bg-orange-400 text-white p-5 rounded-2xl shadow-xl duration-300 hover:scale-[1.1]">
+            <div className="absolute -bottom-5 -left-16 bg-orange-400 text-white p-5 max-md:hidden rounded-2xl shadow-xl duration-300 hover:scale-[1.1]">
               <h4 className="text-3xl font-bold">5+</h4>
               <p className="text-sm">Years of Experience</p>
             </div>

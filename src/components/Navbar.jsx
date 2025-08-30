@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 
 const navMenu = [
-  { name: "Home", path: "/", icon: <FaHome /> },
+  { name: "Home", path: "/coreTech", icon: <FaHome /> },
   { name: "About", path: "/about", icon: <FaAddressBook /> },
   { name: "Services", path: "/services", icon: <FaServicestack /> },
   { name: "Portfolio", path: "/portfolio", icon: <FaBriefcase /> },
@@ -29,7 +29,7 @@ const Navbar = () => {
       {/* ye parent navbar ko center align karega */}
       <nav className="flex items-center justify-between px-6 py-4 bg-white max-w-4xl w-full rounded-full shadow-xl mx-3">
         {/* Logo */}
-        <NavLink to="/">
+        <NavLink to="/coreTech" onClick={toggleMenu}>
           <img src={logo} alt="logo" className="w-28 h-auto" loading="lazy" />
         </NavLink>
 
@@ -57,6 +57,7 @@ const Navbar = () => {
             <li key={index}>
               <NavLink
                 to={menu.path}
+                onClick={toggleMenu}
                 className={({ isActive }) =>
                   `flex items-center gap-2 transition ${
                     isActive

@@ -1,10 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaHeart } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaHeart,
+} from "react-icons/fa";
 import logo from "../assets/logo.png";
 
 const navMenu = [
-  { name: "Home", path: "/" },
+  { name: "Home", path: "/coreTech" },
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Portfolio", path: "/portfolio" },
@@ -18,7 +24,9 @@ const services = [
   "E-commerce Solutions",
   "Digital Marketing",
 ];
-
+const scrollUp = () => {
+  window.scroll(0, 0);
+};
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-300 pt-16 pb-8 px-6 relative overflow-hidden">
@@ -42,6 +50,7 @@ const Footer = () => {
             {navMenu.map((menu, index) => (
               <li key={index}>
                 <NavLink
+                  onClick={scrollUp}
                   to={menu.path}
                   className={({ isActive }) =>
                     ` transition-transform duration-300 ${
@@ -60,7 +69,9 @@ const Footer = () => {
 
         {/* Services */}
         <div>
-          <h3 className="text-white text-lg font-semibold mb-4">Our Services</h3>
+          <h3 className="text-white text-lg font-semibold mb-4">
+            Our Services
+          </h3>
           <ul className="space-y-2">
             {services.map((service, index) => (
               <li
@@ -95,8 +106,8 @@ const Footer = () => {
         </div>
       </div>
 
-     {/* Bottom Line */}
-     <div className="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-400">
+      {/* Bottom Line */}
+      <div className="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-400">
         © {new Date().getFullYear()}{" "}
         <span className="text-white font-semibold">YourCompany</span>. Made with{" "}
         <FaHeart className="inline text-red-500 animate-pulse" /> by{" "}
