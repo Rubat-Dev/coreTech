@@ -44,7 +44,7 @@ const About = () => {
     <section className="relative bg-gray-900 py-30">
       <div className="container mx-auto px-6 lg:px-16">
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
           {/* Left Content */}
           <div className="flex flex-col gap-6">
             <h3 className="text-4xl font-semibold text-white my-4">

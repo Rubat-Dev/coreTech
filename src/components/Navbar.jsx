@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { CgMenuRight } from "react-icons/cg";
-import { FaQuoteLeft, FaWindowClose } from "react-icons/fa";
 import {
   FaHome,
   FaServicestack,
   FaAddressBook,
   FaBriefcase,
   FaEnvelope,
+  FaQuoteLeft,
+  FaWindowClose,
+  FaUsers
 } from "react-icons/fa";
 
 const navMenu = [
@@ -16,7 +18,8 @@ const navMenu = [
   { name: "About", path: "/about", icon: <FaAddressBook /> },
   { name: "Services", path: "/services", icon: <FaServicestack /> },
   { name: "Portfolio", path: "/portfolio", icon: <FaBriefcase /> },
-  { name: "testimonials", path: "/testimonials", icon: <FaQuoteLeft /> },
+  { name: "Testimonials", path: "/testimonials", icon: <FaQuoteLeft /> },
+  { name: "Team", path: "/team", icon: <FaUsers /> },
   { name: "Contact", path: "/contact", icon: <FaEnvelope /> },
 ];
 
@@ -35,7 +38,7 @@ const Navbar = () => {
 
         {/* Menu Button Mobile */}
         <button
-          className="md:hidden text-3xl font-bold text-blue-600 cursor-pointer"
+          className="lg:hidden text-3xl font-bold text-blue-600 cursor-pointer"
           onClick={toggleMenu}
         >
           <CgMenuRight />
@@ -43,12 +46,12 @@ const Navbar = () => {
 
         {/* Nav Links */}
         <ul
-          className={`flex gap-6 max-md:fixed bg-white max-md:flex-col max-md:h-screen max-md:w-full inset-0 items-center justify-center duration-300 ${
-            isOpen ? "max-md:scale-100" : "max-md:scale-0"
+          className={`flex gap-6 max-lg:fixed bg-white max-lg:flex-col max-lg:h-screen max-lg:w-full inset-0 items-center justify-center duration-300 ${
+            isOpen ? "max-lg:scale-100" : "max-lg:scale-0"
           }`}
         >
           <button
-            className="md:hidden text-3xl font-bold text-blue-600 absolute right-5 top-5 cursor-pointer"
+            className="lg:hidden text-3xl font-bold text-blue-600 absolute right-5 top-5 cursor-pointer"
             onClick={toggleMenu}
           >
             <FaWindowClose />

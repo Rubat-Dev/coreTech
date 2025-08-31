@@ -9,21 +9,23 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Testimonials from "./pages/Testimonials";
+import TeamSection from "./pages/TeamSection";
 
 const App = () => {
   return (
     <>
       <Router>
-        <Navbar/>
+        <Navbar />
         <Routes>
-          <Route path="/coreTech" element={<Home/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/services" element={<Services/>}/>
-          <Route path="/portfolio" element={<Portfolio/>}/>
-          <Route path="/testimonials" element={<Testimonials/>}/>
-          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/coreTech" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/team" element={<TeamSection />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
-        <Footer/>
+        <Footer />
         <Toaster position="top-right" reverseOrder={false} />
       </Router>
     </>

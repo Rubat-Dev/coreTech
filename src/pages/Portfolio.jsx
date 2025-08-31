@@ -104,7 +104,7 @@ const Portfolio = () => {
               key={cat}
               onClick={() => setSelectedCategory(cat)}
               aria-pressed={selectedCategory === cat}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 ${
                 selectedCategory === cat
                   ? "bg-blue-600 text-white shadow-lg"
                   : "bg-white text-gray-700  hover:bg-blue-100 "
@@ -156,7 +156,7 @@ const Portfolio = () => {
                       <a
                         href={project.link}
                         aria-label={`Visit ${project.title} live site`}
-                        className="p-2 bg-white rounded-full hover:bg-blue-600 hover:text-white transition"
+                        className="p-2 bg-white/50 rounded-full hover:bg-blue-600 hover:text-white transition"
                         onClick={(e) => e.stopPropagation()}
                       >
                         <FaExternalLinkAlt />
@@ -164,7 +164,7 @@ const Portfolio = () => {
                       <a
                         href={project.github}
                         aria-label={`View ${project.title} GitHub repository`}
-                        className="p-2 bg-white rounded-full hover:bg-gray-900 hover:text-white transition"
+                        className="p-2 bg-white/50 rounded-full hover:bg-gray-900 hover:text-white transition"
                         onClick={(e) => e.stopPropagation()}
                       >
                         <FaGithub />
