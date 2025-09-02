@@ -29,7 +29,6 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 w-full flex justify-center z-50 mt-5">
-      {/* ye parent navbar ko center align karega */}
       <nav className="flex items-center justify-between px-6 py-4 bg-white max-w-4xl w-full rounded-full shadow-xl mx-3">
         {/* Logo */}
         <NavLink to="/coreTech" onClick={toggleMenu}>
